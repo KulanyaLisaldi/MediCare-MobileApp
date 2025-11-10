@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".HomeScreen">
+
+    <!-- Status Bar Spacer -->
+    <View
+        android:id="@+id/status_bar_spacer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Header Section -->
+    <LinearLayout
+        android:id="@+id/header_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:paddingTop="24dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Greeting Text -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello,"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kulanya Lisaldi!"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <!-- Profile Picture -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/profile_pic"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/CircleImageShape"
+            app:strokeColor="@color/brand_primary"
+            app:strokeWidth="2dp"
+            android:contentDescription="@string/profile_picture" />
+
+    </LinearLayout>
+
+    <!-- Search Bar -->
+    <LinearLayout
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/search_background"
+        android:padding="12dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/header_section">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_search"
+            android:contentDescription="@string/search_icon"
+            app:tint="@color/text_secondary" />
+
+        <EditText
+            android:id="@+id/search_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Search"
+            android:textSize="16sp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_secondary"
+            android:background="@null"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:inputType="text" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_mic"
+            android:contentDescription="@string/mic_icon"
+            app:tint="@color/text_secondary" />
+
+    </LinearLayout>
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Order Medicine Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/order_medicine_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/brand_primary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order Medicine"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Upload prescription and tell us what you need. we do the rest."
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save upto 40% off"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp" />
+
+                    <Button
+                        android:id="@+id/order_now_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order now"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/button_secondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Channel Your Doctor Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/channel_doctor_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:cardBackgroundColor="@color/brand_primary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Channel Your Doctor"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Book your doctor online"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        android:layout_marginBottom="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Save upto 15% off"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        android:layout_marginBottom="16dp" />
+
+                    <Button
+                        android:id="@+id/book_now_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Book Now"
+                        android:textColor="@color/white"
+                        android:backgroundTint="@color/button_secondary"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:paddingStart="24dp"
+                        android:paddingEnd="24dp"
+                        android:paddingTop="12dp"
+                        android:paddingBottom="12dp" />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Order By Category Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Section Header -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="16dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Order By Category"
+                        android:textColor="@color/text_primary"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/view_all_link"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View all"
+                        android:textColor="@color/brand_primary"
+                        android:textSize="14sp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="?attr/selectableItemBackgroundBorderless" />
+
+                </LinearLayout>
+
+                <!-- Category Items -->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Pain Killer Category -->
+                        <LinearLayout
+                            android:id="@+id/pain_killer_category"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginEnd="16dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/pain_killer_icon"
+                                android:background="@drawable/category_background"
+                                android:padding="16dp"
+                                android:contentDescription="@string/pain_killer" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pain Killer"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:layout_marginTop="8dp" />
+
+                        </LinearLayout>
+
+                        <!-- Skin Care Category -->
+                        <LinearLayout
+                            android:id="@+id/skin_care_category"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:layout_marginEnd="16dp"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/skin_care_icon"
+                                android:background="@drawable/category_background"
+                                android:padding="16dp"
+                                android:contentDescription="@string/skin_care" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Skin Care"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:layout_marginTop="8dp" />
+
+                        </LinearLayout>
+
+                        <!-- Supplement Category -->
+                        <LinearLayout
+                            android:id="@+id/supplement_category"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:gravity="center"
+                            android:clickable="true"
+                            android:focusable="true"
+                            android:background="?attr/selectableItemBackgroundBorderless">
+
+                            <ImageView
+                                android:layout_width="80dp"
+                                android:layout_height="80dp"
+                                android:src="@drawable/supplement_icon"
+                                android:background="@drawable/category_background"
+                                android:padding="16dp"
+                                android:contentDescription="@string/supplement" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Supplement"
+                                android:textColor="@color/text_primary"
+                                android:textSize="12sp"
+                                android:layout_marginTop="8dp" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="8dp"
+        android:paddingTop="4dp"
+        android:paddingBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Home Tab -->
+        <LinearLayout
+            android:id="@+id/home_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home_filled"
+                android:contentDescription="@string/home"
+                app:tint="@color/brand_primary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textColor="@color/brand_primary"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Medical Bag Tab -->
+        <LinearLayout
+            android:id="@+id/medical_bag_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_medical_bag"
+                android:contentDescription="@string/medical_bag"
+                app:tint="@color/text_secondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Medical"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Prescription Tab -->
+        <LinearLayout
+            android:id="@+id/prescription_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_prescription"
+                android:contentDescription="@string/prescription"
+                app:tint="@color/text_secondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rx"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Cart Tab -->
+        <LinearLayout
+            android:id="@+id/cart_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_cart"
+                android:contentDescription="@string/cart"
+                app:tint="@color/text_secondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cart"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+        <!-- Profile Tab -->
+        <LinearLayout
+            android:id="@+id/profile_tab"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_profile"
+                android:contentDescription="@string/profile"
+                app:tint="@color/text_secondary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textColor="@color/text_secondary"
+                android:textSize="12sp"
+                android:layout_marginTop="4dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

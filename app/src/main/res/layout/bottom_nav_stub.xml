@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:orientation="horizontal"
+    android:background="@color/white"
+    android:elevation="8dp"
+    android:paddingTop="4dp"
+    android:paddingBottom="8dp">
+
+    <LinearLayout
+        android:id="@+id/home_tab"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_home_filled" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/medical_bag_tab"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_medical_bag" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/prescription_tab"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_prescription" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/cart_tab"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_cart" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/profile_tab"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_profile" />
+    </LinearLayout>
+
+</LinearLayout>
+
+

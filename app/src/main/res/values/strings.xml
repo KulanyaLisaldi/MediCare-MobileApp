@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">MediCare</string>
+    <string name="tagline">Your Health, Our Priority</string>
+    <string name="loading_text">Loading your health companion...</string>
+    <string name="app_logo">MediCare Logo</string>
+    
+    <!-- Onboarding Screen 1 -->
+    <string name="onboarding_1_title">Book Trusted Doctor Online</string>
+    <string name="onboarding_1_subtitle">Find Top Specialist and Book Appointment in Second</string>
+    <string name="onboarding_1_image_desc">Medical professionals in white lab coats</string>
+    
+    <!-- Onboarding Screen 2 -->
+    <string name="onboarding_2_title">Order Medicine To Your Doorstep</string>
+    <string name="onboarding_2_subtitle">Upload Prescription or Browse OTC Made Easily</string>
+    <string name="onboarding_2_image_desc">Pharmacist helping customer with medicine</string>
+    
+    <!-- Onboarding Screen 3 -->
+    <string name="onboarding_3_title">Your Health, Simplified</string>
+    <string name="onboarding_3_subtitle">All Your Medical Need, in One Secure Place</string>
+    <string name="onboarding_3_image_desc">Customer receiving medicine from pharmacist</string>
+    
+    <!-- Common -->
+    <string name="next">Next</string>
+    <string name="get_start">Get Start</string>
+    <string name="back_button">Back Button</string>
+    
+    <!-- Welcome Screen -->
+    <string name="welcome_title">Welcome</string>
+    <string name="welcome_subtitle">Sign in or create an account to continue</string>
+    <string name="welcome_image_desc">Welcome illustration</string>
+    <string name="sign_in_with_google">Sign in with Google</string>
+    <string name="sign_in_with_facebook">Sign in with Facebook</string>
+    <string name="sign_in_with_apple">Sign in with Apple</string>
+    <string name="dont_have_account">Don\'t have an account?</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="google_icon_desc">Google icon</string>
+    <string name="facebook_icon_desc">Facebook icon</string>
+    <string name="apple_icon_desc">Apple icon</string>
+    
+    <!-- Welcome Screen Redesigned -->
+    <string name="welcome_to_medicare">Welcome to MediCare !</string>
+    <string name="sign_in">Sign In</string>
+    <string name="or_continue_with">or continue with</string>
+    
+    <!-- Sign In Screen -->
+    <string name="sign_in_title">Sign In</string>
+    <string name="enter_email_hint">Enter Your Email Address</string>
+    <string name="enter_password_hint">Enter Your Password</string>
+    <string name="forgot_password">Forget Password ?</string>
+    <string name="login_picture_desc">Login illustration</string>
+    <string name="email_icon_desc">Email icon</string>
+    <string name="password_icon_desc">Password icon</string>
+    
+    <!-- Home Screen -->
+    <string name="profile_picture">Profile Picture</string>
+    <string name="search_icon">Search icon</string>
+    <string name="mic_icon">Microphone icon</string>
+    <string name="search">Search</string>
+    <string name="home">Home</string>
+    <string name="medical_bag">Medical Bag</string>
+    <string name="prescription">Prescription</string>
+    <string name="cart">Cart</string>
+    <string name="profile">Profile</string>
+    <string name="pain_killer">Pain Killer</string>
+    <string name="skin_care">Skin Care</string>
+    <string name="supplement">Supplement</string>
+    <string name="prescription_icon">Prescription icon</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="password">Password</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="sign_In">Sign In</string>
+</resources>
+
+
+
+
+
+
+
+
+
+
+

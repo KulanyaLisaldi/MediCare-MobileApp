@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="1600dp"
+    android:height="1200dp"
+    android:viewportWidth="1600"
+    android:viewportHeight="1200">
+    
+    <!-- Background -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M0,0h1600v1200h-1600z"/>
+    
+    <!-- Bench -->
+    <path
+        android:fillColor="#D3D3D3"
+        android:pathData="M400,700 L1200,700 L1200,750 L400,750z"/>
+    <path
+        android:fillColor="#A9A9A9"
+        android:pathData="M450,750 L500,850 L1150,850 L1200,750z"/>
+    
+    <!-- Plant pot -->
+    <path
+        android:fillColor="#1E90FF"
+        android:pathData="M100,750 L200,750 L180,850 L120,850z"/>
+    
+    <!-- Plant -->
+    <path
+        android:fillColor="#2E8B57"
+        android:pathData="M120,600 C120,600 80,700 150,750 C80,700 180,700 150,600z"/>
+    
+    <!-- Login form -->
+    <path
+        android:fillColor="#E6F3FF"
+        android:pathData="M200,200 L600,200 Q620,200 620,220 L620,580 Q620,600 600,600 L200,600 Q180,600 180,580 L180,220 Q180,200 200,200z"/>
+    
+    <!-- Form elements -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M250,350 L550,350 L550,400 L250,400z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M250,450 L550,450 L550,500 L250,500z"/>
+    
+    <!-- Login button -->
+    <path
+        android:fillColor="#1E90FF"
+        android:pathData="M300,520 L500,520 Q510,520 510,530 L510,550 Q510,560 500,560 L300,560 Q290,560 290,550 L290,530 Q290,520 300,520z"/>
+    
+    <!-- Person -->
+    <path
+        android:fillColor="#4682B4"
+        android:pathData="M800,500 L900,500 L900,600 L800,600z"/>
+    <path
+        android:fillColor="#FFA07A"
+        android:pathData="M820,350 C820,350 800,400 850,450 C900,400 880,350 820,350z"/>
+    
+    <!-- Lamp post -->
+    <path
+        android:fillColor="#696969"
+        android:pathData="M1100,300 L1150,300 L1150,850 L1100,850z"/>
+    <path
+        android:fillColor="#87CEEB"
+        android:pathData="M1080,250 L1170,250 L1170,300 L1080,300z"/>
+    
+    <!-- Clouds -->
+    <path
+        android:fillColor="#F0F8FF"
+        android:pathData="M100,100 C100,100 50,150 150,150 C250,150 200,100 100,100z"/>
+    <path
+        android:fillColor="#F0F8FF"
+        android:pathData="M1000,150 C1000,150 950,200 1050,200 C1150,200 1100,150 1000,150z"/>
+    <path
+        android:fillColor="#F0F8FF"
+        android:pathData="M1300,100 C1300,100 1250,150 1350,150 C1450,150 1400,100 1300,100z"/>
+    
+    <!-- Check mark bubble -->
+    <path
+        android:fillColor="#E6F3FF"
+        android:pathData="M900,300 C900,300 850,350 950,350 C1050,350 1000,300 900,300z"/>
+    <path
+        android:fillColor="#1E90FF"
+        android:pathData="M920,320 L940,340 L970,310"/>
+</vector>

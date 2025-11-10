@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Back Arrow -->
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back_button"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="40dp"
+            android:elevation="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/sign_up_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Sign Up"
+            android:textColor="@color/text_primary"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Name Label -->
+        <TextView
+            android:id="@+id/name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="32dp"
+            android:text="Full Name"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_title" />
+
+        <EditText
+            android:id="@+id/name_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Enter your full name"
+            android:inputType="textPersonName"
+            android:padding="14dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_label" />
+
+        <!-- Email Label -->
+        <TextView
+            android:id="@+id/email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Email Address"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name_input" />
+
+        <EditText
+            android:id="@+id/email_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Enter your email address"
+            android:inputType="textEmailAddress"
+            android:padding="14dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/name_input"
+            app:layout_constraintStart_toStartOf="@id/name_input"
+            app:layout_constraintTop_toBottomOf="@id/email_label" />
+
+        <!-- Address Label -->
+        <TextView
+            android:id="@+id/address_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Address"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/email_input" />
+
+        <EditText
+            android:id="@+id/address_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Enter your address"
+            android:inputType="textPostalAddress"
+            android:padding="14dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/email_input"
+            app:layout_constraintStart_toStartOf="@id/email_input"
+            app:layout_constraintTop_toBottomOf="@id/address_label" />
+
+        <!-- Phone Label -->
+        <TextView
+            android:id="@+id/phone_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="Phone Number"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/address_input" />
+
+        <EditText
+            android:id="@+id/phone_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="Enter your phone number"
+            android:inputType="phone"
+            android:padding="14dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/address_input"
+            app:layout_constraintStart_toStartOf="@id/address_input"
+            app:layout_constraintTop_toBottomOf="@id/phone_label" />
+
+        <!-- Password Label -->
+        <TextView
+            android:id="@+id/password_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/password"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phone_input" />
+
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/rounded_edittext"
+            android:hint="@string/enter_your_password"
+            android:inputType="textPassword"
+            android:padding="14dp"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="@id/phone_input"
+            app:layout_constraintStart_toStartOf="@id/phone_input"
+            app:layout_constraintTop_toBottomOf="@id/password_label" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sign_up_button"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/rounded_button"
+            android:backgroundTint="@color/brand_primary"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/password_input"
+            app:layout_constraintStart_toStartOf="@id/password_input"
+            app:layout_constraintTop_toBottomOf="@id/password_input" />
+
+        <LinearLayout
+            android:id="@+id/sign_in_prompt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_up_button">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/already_have_an_account"
+                android:textColor="@color/text_primary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/sign_in_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_In"
+                android:textColor="@color/brand_primary"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:clickable="true"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/continue_with_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="or continue with"
+            android:textColor="@color/text_secondary"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/sign_in_prompt" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/continue_with_text"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/google_icon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/rounded_icon_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_google" />
+
+            <ImageView
+                android:id="@+id/facebook_icon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/rounded_icon_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_facebook"
+                android:backgroundTint="@color/white" />
+
+            <ImageView
+                android:id="@+id/apple_icon"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/rounded_icon_background"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="10dp"
+                android:src="@drawable/ic_apple"
+                android:backgroundTint="@color/white" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

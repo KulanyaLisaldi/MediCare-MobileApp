@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+    <!-- Light phone rectangle -->
+    <path
+        android:fillColor="#E3F2FD"
+        android:pathData="M50,40h100a8,8 0 0 1 8,8v104a8,8 0 0 1 -8,8H50a8,8 0 0 1 -8,-8V48a8,8 0 0 1 8,-8z"/>
+    <!-- Money note -->
+    <path
+        android:fillColor="#A5D6A7"
+        android:pathData="M70,86h84v36h-84z"/>
+    <path
+        android:fillColor="#66BB6A"
+        android:pathData="M78,92h68v24h-68z"/>
+    <!-- Dollar sign -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M110,100c-6,0 -10,3 -10,8 0,10 20,6 20,12 0,2 -2,4 -6,4 -4,0 -8,-2 -10,-3l-2,6c2,1 6,3 12,3v4h6v-5c6,-1 10,-5 10,-9 0,-10 -20,-7 -20,-12 0,-2 2,-3 6,-3 4,0 8,2 10,3l2,-6c-2,-1 -6,-2 -12,-2v-4h-6v4z"/>
+    <!-- Shield with check -->
+    <path
+        android:fillColor="#42A5F5"
+        android:pathData="M70,118l20,-8 20,8v16c0,14 -10,26 -20,30 -10,-4 -20,-16 -20,-30z"/>
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M98,133l-8,8 -6,-6 -6,6 12,12 14,-14z"/>
+  </vector>
+

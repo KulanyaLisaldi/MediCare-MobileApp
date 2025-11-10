@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="brand_primary">#00BCD4</color>
+    <color name="accent_light">#E0F2F1</color>
+    <color name="text_primary">#212121</color>
+    <color name="text_secondary">#757575</color>
+    <color name="progress_background">#E0E0E0</color>
+    <color name="dot_inactive">#BDBDBD</color>
+    <color name="button_secondary">#9E9E9E</color>
+    <color name="social_section_background">#F5F5F5</color>
+    <color name="separator_color">#E0E0E0</color>
+    <color name="divider">#E0E0E0</color>
+    <color name="teal_200">#80CBC4</color>
+    <color name="light_blue">#03A9F4FF</color>
+</resources>

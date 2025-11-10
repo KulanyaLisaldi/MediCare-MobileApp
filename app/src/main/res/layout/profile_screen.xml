@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ProfileScreen">
+
+    <!-- Top Status Bar Area -->
+    <View
+        android:id="@+id/status_bar_placeholder"
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Header Section with Back, Greeting and Bell Icon -->
+    <LinearLayout
+        android:id="@+id/header_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/status_bar_placeholder">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello,"
+                android:textColor="@color/text_secondary"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kulanya Lisaldi!"
+                android:textColor="@color/text_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/notification_bell"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_notification_bell"
+            android:contentDescription="Notifications"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+
+    <!-- Profile Picture Section -->
+    <LinearLayout
+        android:id="@+id/profile_picture_section"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/header_section"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp">
+
+            <ImageView
+                android:id="@+id/profile_picture"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/profile_pic"
+                android:scaleType="centerCrop"
+                android:contentDescription="Profile Picture"
+                android:background="@drawable/circle_clip"
+                android:clipToOutline="true" />
+
+            
+        </FrameLayout>
+    </LinearLayout>
+
+    <!-- Scrollable content to avoid being hidden by bottom nav -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/profile_picture_section"
+        app:layout_constraintBottom_toTopOf="@id/profile_bottom_nav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/user_info_section"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:layout_marginTop="32dp">
+
+        <!-- Full Name Field -->
+        <EditText
+            android:id="@+id/full_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Kulanya Lisaldi"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:background="@drawable/profile_input_background"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="textPersonName"
+            android:enabled="false"
+            android:focusable="false"
+            android:clickable="false" />
+
+        <!-- Email Field -->
+        <EditText
+            android:id="@+id/email_input"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="kulanya.lisaldi@gmail.com"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:background="@drawable/profile_input_background"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="textEmailAddress"
+            android:enabled="false"
+            android:focusable="false"
+            android:clickable="false" />
+
+        <!-- Address Field -->
+        <EditText
+            android:id="@+id/address_input"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Udaya mawatha, Malabe"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:background="@drawable/profile_input_background"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="textPostalAddress"
+            android:enabled="false"
+            android:focusable="false"
+            android:clickable="false" />
+
+        <!-- Phone Field -->
+        <EditText
+            android:id="@+id/phone_input"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="070-1536490"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:background="@drawable/profile_input_background"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:inputType="phone"
+            android:enabled="false"
+            android:focusable="false"
+            android:clickable="false" />
+
+        <!-- Password Field -->
+        <EditText
+            android:id="@+id/password_input"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="•••••"
+            android:textColor="@color/text_primary"
+            android:textSize="16sp"
+            android:background="@drawable/profile_input_background"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_marginBottom="32dp"
+            android:inputType="textPassword"
+            android:enabled="false"
+            android:focusable="false"
+            android:clickable="false" />
+            <!-- Profile Navigation Options moved inside scroll to keep visible -->
+            <LinearLayout
+                android:id="@+id/profile_options_section"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp">
+
+                <!-- Order History Option -->
+                <LinearLayout
+                    android:id="@+id/order_history_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_order_history"
+                        android:contentDescription="Order History"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Order History"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        android:contentDescription="Navigate to Order History" />
+                </LinearLayout>
+
+                <!-- Edit Profile Option -->
+                <LinearLayout
+                    android:id="@+id/edit_profile_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginBottom="8dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_edit_profile"
+                        android:contentDescription="Edit Profile"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Edit Profile"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        android:contentDescription="Navigate to Edit Profile" />
+                </LinearLayout>
+
+                <!-- Logout Option -->
+                <LinearLayout
+                    android:id="@+id/logout_option"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:background="?attr/selectableItemBackground"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:layout_marginBottom="16dp">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_logout"
+                        android:contentDescription="Logout"
+                        android:layout_marginEnd="16dp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Logout"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        android:contentDescription="Logout" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Bottom Navigation -->
+    <include
+        layout="@layout/bottom_nav_profile"
+        android:id="@+id/profile_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

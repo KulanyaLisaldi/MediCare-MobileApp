@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".CheckoutScreen">
+
+    <!-- Top bar with back arrow and title -->
+    <LinearLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="24dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back_button"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Check Out"
+            android:textColor="@color/text_primary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginStart="16dp"
+            android:gravity="center" />
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:layout_marginBottom="64dp"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <!-- Added Items Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Added Items"
+                android:textColor="@color/text_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="16dp" />
+
+            <!-- Product Cards Grid -->
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:columnCount="2"
+                app:rowCount="1"
+                app:useDefaultMargins="true"
+                android:layout_marginBottom="24dp">
+
+                <!-- Product Card 1 (Vitamin E) -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/suppliment" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|start"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/product_label_background"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Vitamin E"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rs.200"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Product Card 2 (Aspirin) -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_columnWeight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/painkiller" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="bottom|start"
+                            android:layout_margin="8dp"
+                            android:background="@drawable/product_label_background"
+                            android:padding="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Aspirin"
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Rs.150"
+                                android:textColor="@color/white"
+                                android:textSize="10sp" />
+                        </LinearLayout>
+                    </FrameLayout>
+                </androidx.cardview.widget.CardView>
+            </androidx.gridlayout.widget.GridLayout>
+
+            <!-- Cost Breakdown -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/cost_breakdown_background"
+                android:padding="16dp"
+                android:layout_marginBottom="24dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="12dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Vitamin E"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs.200.00"
+                        android:textColor="@color/text_primary"
+                        android:textSize="14sp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/divider"
+                    android:layout_marginBottom="12dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Total Cost"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rs.200.00"
+                        android:textColor="@color/text_primary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Submit Button -->
+            <Button
+                android:id="@+id/submit_button"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="Submit"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/brand_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="24dp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <include
+        layout="@layout/bottom_nav_checkout"
+        android:id="@+id/checkout_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

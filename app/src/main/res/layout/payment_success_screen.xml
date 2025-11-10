@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/social_section_background"
+    tools:context=".PaymentSuccessScreen">
+
+    <!-- Header -->
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="12dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/back_arrow"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="Payment Successfully\nVrified."
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.448"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header" />
+
+    <ImageView
+        android:id="@+id/success_image"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="48dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_payment_success"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.35"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="132dp"
+        android:text="Thank You...!"
+        android:textColor="@color/text_primary"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.562"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
